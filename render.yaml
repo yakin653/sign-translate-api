@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sign-translate-yakin
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: CORS_ALLOW_ALL
+        value: "1"
+      - key: WHISPER_MOCK
+        value: "1"
+      - key: AUDIO_CAPTURE
+        value: "none"
+    healthCheckPath: /health

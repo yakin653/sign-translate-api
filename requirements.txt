@@ -1,0 +1,8 @@
+fastapi>=0.115.0,<1
+uvicorn[standard]>=0.32.0,<1
+python-multipart>=0.0.12
+numpy>=1.26.0,<3
+openai-whisper>=20231117
+yt-dlp>=2024.1.0
+imageio-ffmpeg>=0.5.1
+youtube-transcript-api>=0.6.2
